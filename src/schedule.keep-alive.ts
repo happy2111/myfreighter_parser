@@ -18,7 +18,8 @@ const APP_URL = getAppUrl();
 const KEEP_ALIVE_INTERVAL = 4.5 * 60 * 1000; // 4.5 минуты
 
 // Пингуем ТОЛЬКО если это продакшен (не localhost)
-const isProduction = !APP_URL.includes('localhost') && !APP_URL.includes('127.0.0.1');
+const isProduction =
+  !APP_URL.includes('localhost') && !APP_URL.includes('127.0.0.1');
 
 let intervalId: NodeJS.Timeout | null = null;
 
